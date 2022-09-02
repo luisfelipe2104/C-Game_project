@@ -20,27 +20,44 @@ namespace JogoHeroi2022_v0
 	{
 		public MainForm()
 		{
+			
+//			PictureBox button1 = new PictureBox();
+			
+			
+			
+			
 			InitializeComponent();
 			
+			// sets the height and width of the game
 			this.Height = Screen.PrimaryScreen.Bounds.Height / 2 + Screen.PrimaryScreen.Bounds.Height / 4 + 150;
 			this.Width = Screen.PrimaryScreen.Bounds.Width / 2 + Screen.PrimaryScreen.Bounds.Width / 4;
 			
 			pictureBox1.Left = this.Width/4;
-			pictureBox1.Top = this.Height/4;
-			
+			pictureBox1.Top = this.Height/4;		
+
+//			button1.Width = 250;
+//			button1.Height = 50;
+//			
+//			button1.Top = 50;
+//			button1.Left= 50;
+//			
+//			button1.Parent = this;	
+//			button1.Load("butao2.png");
 		}
 	
-		PictureBox heroi = new PictureBox();
+//		PictureBox heroi = new PictureBox();
 		PictureBox fundo = new PictureBox();
+		
+		Heroi heroi = new Heroi();
 		
 		void PictureBox1Click(object sender, EventArgs e)
 		{
 			this.KeyPreview = true;
 			
 			pictureBox1.Visible = false;
+			pictureBox1.Enabled = false;
 			
-			// Tela de fundo (cenário)
-			
+			// Tela de fundo (Cenário)
 			
 			fundo.Parent = this;
 			fundo.Width = this.Width;
@@ -49,7 +66,6 @@ namespace JogoHeroi2022_v0
 			fundo.SizeMode = PictureBoxSizeMode.StretchImage;
 			
 			// Heroi 
-			
 			
 			heroi.Parent = fundo;
 			heroi.Left = 50;
@@ -60,22 +76,22 @@ namespace JogoHeroi2022_v0
 			heroi.Load("heroi.gif");
 			heroi.Width = 80;
 			heroi.Height = 170;
-			
-			
-			
+					
 		}
-		void MainFormKeyDown(object sender, KeyEventArgs e)
+		void MainFormKeyDown(object sender, KeyEventArgs e) // Programar as teclas de movimento.
 		{
+			// checks the key that is being pressed and moves the hero
 			if(e.KeyCode == Keys.W || e.KeyCode == Keys.Up)
-                heroi.Top -= 15;
+				heroi.Up();
             if(e.KeyCode == Keys.A || e.KeyCode == Keys.Left)
-                heroi.Left -= 15;
+            	heroi.Lefts();
             if(e.KeyCode == Keys.S || e.KeyCode == Keys.Down)
             	if(heroi.Top + heroi.Height < fundo.Height)
-                	heroi.Top += 15;
+            		heroi.Down();
             if(e.KeyCode == Keys.D || e.KeyCode == Keys.Right)
-                heroi.Left += 15;
+            	heroi.Right();
             
+           // e.KeyCode == Keys. Selecionar qualquer tecla
 		}
 		
 	}

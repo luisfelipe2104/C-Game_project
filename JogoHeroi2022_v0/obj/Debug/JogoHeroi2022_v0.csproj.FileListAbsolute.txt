@@ -22,3 +22,11 @@ D:\2º Modulo\Ds chicaum c#\JogoHeroi2022_v0\JogoHeroi2022_v0\obj\Debug\JogoHero
 D:\2º Modulo\Ds chicaum c#\JogoHeroi2022_v0\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.csproj.GenerateResource.Cache
 D:\2º Modulo\Ds chicaum c#\JogoHeroi2022_v0\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.exe
 D:\2º Modulo\Ds chicaum c#\JogoHeroi2022_v0\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.pdb
+G:\2º Modulo\Ds chicaum c#\JogoHeroi2022_v0\JogoHeroi2022_v0\bin\Debug\JogoHeroi2022_v0.exe.config
+G:\2º Modulo\Ds chicaum c#\JogoHeroi2022_v0\JogoHeroi2022_v0\bin\Debug\JogoHeroi2022_v0.exe
+G:\2º Modulo\Ds chicaum c#\JogoHeroi2022_v0\JogoHeroi2022_v0\bin\Debug\JogoHeroi2022_v0.pdb
+G:\2º Modulo\Ds chicaum c#\JogoHeroi2022_v0\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.csprojResolveAssemblyReference.cache
+G:\2º Modulo\Ds chicaum c#\JogoHeroi2022_v0\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.MainForm.resources
+G:\2º Modulo\Ds chicaum c#\JogoHeroi2022_v0\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.csproj.GenerateResource.Cache
+G:\2º Modulo\Ds chicaum c#\JogoHeroi2022_v0\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.exe
+G:\2º Modulo\Ds chicaum c#\JogoHeroi2022_v0\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.pdb
