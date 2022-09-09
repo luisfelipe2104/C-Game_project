@@ -49,7 +49,66 @@ namespace JogoHeroi2022_v0
 		PictureBox fundo = new PictureBox();
 		
 		Heroi heroi = new Heroi();
+		int counter = 1;
 		
+		void MainFormKeyDown(object sender, KeyEventArgs e) // Programar as teclas de movimento.
+		{
+			// checks the key that is being pressed and moves the hero
+			if(e.KeyCode == Keys.W || e.KeyCode == Keys.Up){
+				if(heroi.Top + heroi.Height < 0){
+					fundo.Load("ceu.png");
+					heroi.Top = fundo.Height;
+				}
+				heroi.Up();
+			}
+				
+				
+			if(e.KeyCode == Keys.A || e.KeyCode == Keys.Left){
+				if(heroi.Left < 0){
+					if(counter > 1){
+						counter--;
+					}
+					fundo.Load("cenario" + counter + ".jpg");
+					
+					heroi.Left = fundo.Width - heroi.Width;
+					
+				}
+				if(counter == 1 && heroi.Left < 0 + (heroi.Width/2) ){
+					
+				}
+				else{
+					heroi.Lefts();
+				}
+				
+			}
+				
+			if(e.KeyCode == Keys.S || e.KeyCode == Keys.Down)
+				if(heroi.Top + heroi.Height < fundo.Height)
+					heroi.Down();
+			if(e.KeyCode == Keys.D || e.KeyCode == Keys.Right){
+				if(heroi.Left > fundo.Width){
+					if(counter < 3){
+						counter++;
+					}
+					fundo.Load("cenario" + counter + ".jpg");
+					
+					
+					heroi.Left = 0;
+					
+					
+				}
+				if(counter == 3 && heroi.Left > fundo.Width - heroi.Width * 1.5){
+					
+				}
+				else{
+					heroi.Right();
+				}
+			}
+			
+			
+			
+			// e.KeyCode == Keys. Selecionar qualquer tecla
+		}
 		void PictureBox1Click(object sender, EventArgs e)
 		{
 			this.KeyPreview = true;
@@ -62,7 +121,7 @@ namespace JogoHeroi2022_v0
 			fundo.Parent = this;
 			fundo.Width = this.Width;
 			fundo.Height = this.Height - 150;
-			fundo.Load("cenario2.jpg");
+			fundo.Load("cenario1.jpg");
 			fundo.SizeMode = PictureBoxSizeMode.StretchImage;
 			
 			// Heroi 
@@ -77,21 +136,6 @@ namespace JogoHeroi2022_v0
 			heroi.Width = 80;
 			heroi.Height = 170;
 					
-		}
-		void MainFormKeyDown(object sender, KeyEventArgs e) // Programar as teclas de movimento.
-		{
-			// checks the key that is being pressed and moves the hero
-			if(e.KeyCode == Keys.W || e.KeyCode == Keys.Up)
-				heroi.Up();
-            if(e.KeyCode == Keys.A || e.KeyCode == Keys.Left)
-            	heroi.Lefts();
-            if(e.KeyCode == Keys.S || e.KeyCode == Keys.Down)
-            	if(heroi.Top + heroi.Height < fundo.Height)
-            		heroi.Down();
-            if(e.KeyCode == Keys.D || e.KeyCode == Keys.Right)
-            	heroi.Right();
-            
-           // e.KeyCode == Keys. Selecionar qualquer tecla
 		}
 		
 	}
