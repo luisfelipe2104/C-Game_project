@@ -30,3 +30,11 @@ G:\2º Modulo\Ds chicaum c#\JogoHeroi2022_v0\JogoHeroi2022_v0\obj\Debug\JogoHero
 G:\2º Modulo\Ds chicaum c#\JogoHeroi2022_v0\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.csproj.GenerateResource.Cache
 G:\2º Modulo\Ds chicaum c#\JogoHeroi2022_v0\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.exe
 G:\2º Modulo\Ds chicaum c#\JogoHeroi2022_v0\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.pdb
+C:\Users\Aluno Etec\Downloads\C-Game_project-main\JogoHeroi2022_v0\bin\Debug\JogoHeroi2022_v0.exe.config
+C:\Users\Aluno Etec\Downloads\C-Game_project-main\JogoHeroi2022_v0\bin\Debug\JogoHeroi2022_v0.exe
+C:\Users\Aluno Etec\Downloads\C-Game_project-main\JogoHeroi2022_v0\bin\Debug\JogoHeroi2022_v0.pdb
+C:\Users\Aluno Etec\Downloads\C-Game_project-main\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.csprojResolveAssemblyReference.cache
+C:\Users\Aluno Etec\Downloads\C-Game_project-main\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.MainForm.resources
+C:\Users\Aluno Etec\Downloads\C-Game_project-main\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.csproj.GenerateResource.Cache
+C:\Users\Aluno Etec\Downloads\C-Game_project-main\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.exe
+C:\Users\Aluno Etec\Downloads\C-Game_project-main\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.pdb

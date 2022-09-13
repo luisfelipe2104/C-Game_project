@@ -50,27 +50,36 @@ namespace JogoHeroi2022_v0
 		
 		Heroi heroi = new Heroi();
 		int counter = 1;
+		bool sky = false;
 		
 		void MainFormKeyDown(object sender, KeyEventArgs e) // Programar as teclas de movimento.
 		{
 			// checks the key that is being pressed and moves the hero
 			if(e.KeyCode == Keys.W || e.KeyCode == Keys.Up){
 				if(heroi.Top + heroi.Height < 0){
+					sky = true;
 					fundo.Load("ceu.png");
 					heroi.Top = fundo.Height;
 				}
-				heroi.Up();
+				if(sky && heroi.Top >= 0 || !sky){
+					heroi.Up();
+				}
+				
 			}
 				
 				
 			if(e.KeyCode == Keys.A || e.KeyCode == Keys.Left){
 				if(heroi.Left < 0){
+					heroi.Left = fundo.Width - heroi.Width;
 					if(counter > 1){
 						counter--;
 					}
-					fundo.Load("cenario" + counter + ".jpg");
+					if(!sky){
+						fundo.Load("cenario" + counter + ".jpg");
+					}
 					
-					heroi.Left = fundo.Width - heroi.Width;
+					
+					
 					
 				}
 				if(counter == 1 && heroi.Left < 0 + (heroi.Width/2) ){
@@ -82,18 +91,33 @@ namespace JogoHeroi2022_v0
 				
 			}
 				
-			if(e.KeyCode == Keys.S || e.KeyCode == Keys.Down)
-				if(heroi.Top + heroi.Height < fundo.Height)
+			if(e.KeyCode == Keys.S || e.KeyCode == Keys.Down){
+				if(sky){
 					heroi.Down();
+					if(heroi.Top > fundo.Height){
+						sky = false;
+						heroi.Top = 0;
+						fundo.Load("cenario" + counter + ".jpg");
+					}
+				}
+				if(heroi.Top + heroi.Height < fundo.Height){
+					heroi.Down();
+				}
+					
+			}
+				
 			if(e.KeyCode == Keys.D || e.KeyCode == Keys.Right){
 				if(heroi.Left > fundo.Width){
+					heroi.Left = 0;
 					if(counter < 3){
 						counter++;
 					}
-					fundo.Load("cenario" + counter + ".jpg");
+					if(!sky){
+						fundo.Load("cenario" + counter + ".jpg");
+					}
 					
 					
-					heroi.Left = 0;
+					
 					
 					
 				}
