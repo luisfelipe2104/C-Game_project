@@ -55,24 +55,7 @@ namespace JogoHeroi2022_v0
 			}
 
 			if(e.KeyCode == Keys.A || e.KeyCode == Keys.Left){
-				if(heroi.Left < 0){
-					heroi.Left = fundo.Width - heroi.Width;
-					if(counter > 1){
-						counter--;
-					}
-					if(!sky){
-						fundo.Load("cenario" + counter + ".jpg");
-					}
-					
-				}
-				if(counter == 1 && heroi.Left < 0 + (heroi.Width/2) ){
-					
-				}
-				else{
-					heroi.Load("personagemLeft.gif");
-					heroi.Lefts();
-				}
-				
+				heroi.Lefts();	
 			}
 				
 			if(e.KeyCode == Keys.S || e.KeyCode == Keys.Down){

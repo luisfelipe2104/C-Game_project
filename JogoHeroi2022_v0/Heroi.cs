@@ -31,7 +31,7 @@ namespace JogoHeroi2022_v0
 		// hero variables
 		public int xp = 0;
 		public int nivel = 0;
-		public int direction = 1; // may be 1 or -1
+		public bool ahead = false; // may be 1 or -1
 		public int counter = 1;
 		public string rightImage = "personagemRight.gif";
 		public string leftImage = "personagemLeft.gif";
@@ -45,10 +45,10 @@ namespace JogoHeroi2022_v0
 				Left += speed;
 			}
 			
-			if (direction != 1)
+			if (!ahead)
 			{
 				// hero changed the direction
-				direction = 1;
+				ahead = true;
 				Load(rightImage);
 			}
 			
@@ -65,7 +65,24 @@ namespace JogoHeroi2022_v0
 		}
 		
 		public void Lefts(){
-			Left -= speed;
+			if(counter == 1 && Left < 0 + (this.Width/2) ){
+					
+			}
+			else{
+				Left -= speed;
+			}
+			
+			if(ahead){
+				ahead = false;
+				Load(leftImage);
+			}
+			if (Left < 0){
+				Left = MainForm.fundo.Width - this.Width;
+				if(counter > 1){
+					counter--;
+				}
+				MainForm.fundo.Load("cenario" + counter + ".jpg");
+			}
 		}
 		
 		public void Up(){
