@@ -20,12 +20,6 @@ namespace JogoHeroi2022_v0
 	{
 		public MainForm()
 		{
-			
-//			PictureBox button1 = new PictureBox();
-			
-			
-			
-			
 			InitializeComponent();
 			
 			// sets the height and width of the game
@@ -34,19 +28,9 @@ namespace JogoHeroi2022_v0
 			
 			pictureBox1.Left = this.Width/4;
 			pictureBox1.Top = this.Height/4;		
-
-//			button1.Width = 250;
-//			button1.Height = 50;
-//			
-//			button1.Top = 50;
-//			button1.Left= 50;
-//			
-//			button1.Parent = this;	
-//			button1.Load("butao2.png");
 		}
 	
-//		PictureBox heroi = new PictureBox();
-		PictureBox fundo = new PictureBox();
+		public static PictureBox fundo = new PictureBox();
 		
 		Heroi heroi = new Heroi();
 		int counter = 1;
@@ -55,19 +39,21 @@ namespace JogoHeroi2022_v0
 		void MainFormKeyDown(object sender, KeyEventArgs e) // Programar as teclas de movimento.
 		{
 			// checks the key that is being pressed and moves the hero
+			
 			if(e.KeyCode == Keys.W || e.KeyCode == Keys.Up){
 				if(heroi.Top + heroi.Height < 0){
+					
 					sky = true;
-					fundo.Load("ceu.png");
+					fundo.Load("ceu.jpg");
 					heroi.Top = fundo.Height;
+					
 				}
+				
 				if(sky && heroi.Top >= 0 || !sky){
 					heroi.Up();
 				}
-				
 			}
-				
-				
+
 			if(e.KeyCode == Keys.A || e.KeyCode == Keys.Left){
 				if(heroi.Left < 0){
 					heroi.Left = fundo.Width - heroi.Width;
@@ -78,14 +64,12 @@ namespace JogoHeroi2022_v0
 						fundo.Load("cenario" + counter + ".jpg");
 					}
 					
-					
-					
-					
 				}
 				if(counter == 1 && heroi.Left < 0 + (heroi.Width/2) ){
 					
 				}
 				else{
+					heroi.Load("personagemLeft.gif");
 					heroi.Lefts();
 				}
 				
@@ -107,30 +91,9 @@ namespace JogoHeroi2022_v0
 			}
 				
 			if(e.KeyCode == Keys.D || e.KeyCode == Keys.Right){
-				if(heroi.Left > fundo.Width){
-					heroi.Left = 0;
-					if(counter < 3){
-						counter++;
-					}
-					if(!sky){
-						fundo.Load("cenario" + counter + ".jpg");
-					}
-					
-					
-					
-					
-					
-				}
-				if(counter == 3 && heroi.Left > fundo.Width - heroi.Width * 1.5){
-					
-				}
-				else{
-					heroi.Right();
-				}
+				heroi.Right();
 			}
-			
-			
-			
+					
 			// e.KeyCode == Keys. Selecionar qualquer tecla
 		}
 		void PictureBox1Click(object sender, EventArgs e)
@@ -156,9 +119,11 @@ namespace JogoHeroi2022_v0
 			heroi.SizeMode = PictureBoxSizeMode.StretchImage;
 			heroi.BackColor = Color.Transparent;
 			
-			heroi.Load("heroi.gif");
-			heroi.Width = 80;
-			heroi.Height = 170;
+			heroi.Load("personagemRight.gif");
+			
+			heroi.Width = 200;
+			heroi.Height = 200;
+
 					
 		}
 		
