@@ -31,7 +31,8 @@ namespace JogoHeroi2022_v0
 		// hero variables
 		public int xp = 0;
 		public int nivel = 0;
-		public bool ahead = false; // may be 1 or -1
+		public bool ahead = false;
+		public bool sky = false;
 		public int counter = 1;
 		public string rightImage = "personagemRight.gif";
 		public string leftImage = "personagemLeft.gif";
@@ -50,6 +51,8 @@ namespace JogoHeroi2022_v0
 				// hero changed the direction
 				ahead = true;
 				Load(rightImage);
+				
+				
 			}
 			
 			if (Left > MainForm.fundo.Width - this.Width)
@@ -58,8 +61,10 @@ namespace JogoHeroi2022_v0
 				if (counter < 3){
 					counter ++;
 				}
+				if(!sky){
+					MainForm.fundo.Load("cenario" + counter + ".jpg");
+				}
 				
-				MainForm.fundo.Load("cenario" + counter + ".jpg");
 			}
 			
 		}
@@ -75,22 +80,49 @@ namespace JogoHeroi2022_v0
 			if(ahead){
 				ahead = false;
 				Load(leftImage);
+				
+				
 			}
 			if (Left < 0){
 				Left = MainForm.fundo.Width - this.Width;
 				if(counter > 1){
 					counter--;
 				}
-				MainForm.fundo.Load("cenario" + counter + ".jpg");
+				
+				if(!sky){
+					MainForm.fundo.Load("cenario" + counter + ".jpg");
+				}
+				
 			}
 		}
 		
 		public void Up(){
-			Top -= speed;
+			if(Top + this.Height < 0){
+					
+					sky = true;
+					MainForm.fundo.Load("ceu.jpg");
+					Top = MainForm.fundo.Height;
+					
+				}
+				
+				if(sky && Top >= 0 || !sky){
+					Top -= speed;
+				}
 		}
 		
 		public void Down(){
-			Top += speed;
+			
+			if(sky){
+					Top += speed;
+					if(Top > MainForm.fundo.Height){
+						sky = false;
+						Top = 0;
+						MainForm.fundo.Load("cenario" + counter + ".jpg");
+					}
+				}
+				if(Top + this.Height < MainForm.fundo.Height){
+					Top += speed;
+				}
 		}
 	}
 }

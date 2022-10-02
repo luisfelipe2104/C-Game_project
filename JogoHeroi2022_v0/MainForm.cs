@@ -41,17 +41,7 @@ namespace JogoHeroi2022_v0
 			// checks the key that is being pressed and moves the hero
 			
 			if(e.KeyCode == Keys.W || e.KeyCode == Keys.Up){
-				if(heroi.Top + heroi.Height < 0){
-					
-					sky = true;
-					fundo.Load("ceu.jpg");
-					heroi.Top = fundo.Height;
-					
-				}
-				
-				if(sky && heroi.Top >= 0 || !sky){
-					heroi.Up();
-				}
+				heroi.Up();
 			}
 
 			if(e.KeyCode == Keys.A || e.KeyCode == Keys.Left){
@@ -59,18 +49,7 @@ namespace JogoHeroi2022_v0
 			}
 				
 			if(e.KeyCode == Keys.S || e.KeyCode == Keys.Down){
-				if(sky){
-					heroi.Down();
-					if(heroi.Top > fundo.Height){
-						sky = false;
-						heroi.Top = 0;
-						fundo.Load("cenario" + counter + ".jpg");
-					}
-				}
-				if(heroi.Top + heroi.Height < fundo.Height){
-					heroi.Down();
-				}
-					
+				heroi.Down();
 			}
 				
 			if(e.KeyCode == Keys.D || e.KeyCode == Keys.Right){
