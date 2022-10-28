@@ -33,6 +33,7 @@ namespace JogoHeroi2022_v0
 		public static PictureBox fundo = new PictureBox();
 		
 		Heroi heroi = new Heroi();
+		Inimigo inimigo = new Inimigo();
 		int counter = 1;
 		bool sky = false;
 		
@@ -54,6 +55,10 @@ namespace JogoHeroi2022_v0
 				
 			if(e.KeyCode == Keys.D || e.KeyCode == Keys.Right){
 				heroi.Right();
+			}
+			
+			if(e.KeyCode == Keys.Space){
+				heroi.Shot(heroi.Top, heroi.Left, fundo);
 			}
 					
 			// e.KeyCode == Keys. Selecionar qualquer tecla
@@ -85,8 +90,22 @@ namespace JogoHeroi2022_v0
 			
 			heroi.Width = 200;
 			heroi.Height = 200;
+			
+			timer1.Enabled = true;
+			
+			inimigo.Parent = fundo;
 
 					
+		}
+		void Timer1Tick(object sender, EventArgs e)
+		{
+			if (heroi.Bounds.IntersectsWith(inimigo.Bounds))
+			{
+			    inimigo.timer.Enabled = false;
+			    timer1.Enabled = false;
+			    heroi.Dispose();
+			    MessageBox.Show("COLIDIU");
+			}
 		}
 		
 	}

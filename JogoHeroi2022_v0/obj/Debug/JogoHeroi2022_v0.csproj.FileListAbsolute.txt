@@ -78,3 +78,11 @@ D:\2º Modulo\Ds chicaum c#\C-Game_project-main\JogoHeroi2022_v0\obj\Debug\JogoH
 D:\2º Modulo\Ds chicaum c#\C-Game_project-main\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.csproj.GenerateResource.Cache
 D:\2º Modulo\Ds chicaum c#\C-Game_project-main\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.exe
 D:\2º Modulo\Ds chicaum c#\C-Game_project-main\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.pdb
+C:\Users\Joaquim\Documents\SharpDevelop Projects\C-Game_project\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.csprojResolveAssemblyReference.cache
+C:\Users\Joaquim\Documents\SharpDevelop Projects\C-Game_project\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.MainForm.resources
+C:\Users\Joaquim\Documents\SharpDevelop Projects\C-Game_project\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.csproj.GenerateResource.Cache
+C:\Users\Joaquim\Documents\SharpDevelop Projects\C-Game_project\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.exe
+C:\Users\Joaquim\Documents\SharpDevelop Projects\C-Game_project\JogoHeroi2022_v0\bin\Debug\JogoHeroi2022_v0.exe.config
+C:\Users\Joaquim\Documents\SharpDevelop Projects\C-Game_project\JogoHeroi2022_v0\bin\Debug\JogoHeroi2022_v0.exe
+C:\Users\Joaquim\Documents\SharpDevelop Projects\C-Game_project\JogoHeroi2022_v0\bin\Debug\JogoHeroi2022_v0.pdb
+C:\Users\Joaquim\Documents\SharpDevelop Projects\C-Game_project\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.pdb

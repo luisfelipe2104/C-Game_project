@@ -3,7 +3,7 @@
  * User: Joaquim
  * Date: 01/09/2022
  * Time: 23:13
- * sla
+ * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
@@ -123,6 +123,15 @@ namespace JogoHeroi2022_v0
 				if(Top + this.Height < MainForm.fundo.Height){
 					Top += speed;
 				}
+		}
+		
+		public void Shot(int top, int left, PictureBox fundo)
+		{
+			Tiro tiro = new Tiro();
+			tiro.Parent = fundo;
+			tiro.Top =  top;
+			tiro.Left = left;
+			
 		}
 	}
 }
