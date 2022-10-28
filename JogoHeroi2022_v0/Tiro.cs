@@ -19,11 +19,11 @@ namespace JogoHeroi2022_v0
 	{
 		public Tiro()
 		{
-			Load("personagemRight.gif");
+			Load("especial2.png");
 			SizeMode = PictureBoxSizeMode.StretchImage;
 			BackColor = Color.Transparent;
-			Width = 100;
-			Height = 100;
+			Width = 50;
+			Height = 50;
 			Top = 200;
 			Left = 1200;
 			
@@ -39,11 +39,12 @@ namespace JogoHeroi2022_v0
 		
 		void Movimento(object sender, EventArgs e)
 		{
-			Left += 15;
-			if (Left > 1000)
+			Left += 25;
+			if (Left > MainForm.fundo.Width)
 			{
 				timer2.Enabled = false;
 				Dispose();
+				MainForm.heroi.tiros--;
 			}
 		}
 	}

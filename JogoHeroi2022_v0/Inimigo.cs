@@ -19,11 +19,11 @@ namespace JogoHeroi2022_v0
 	{
 		public Inimigo()
 		{
-			Load("personagemRight.gif");
+			Load("enemy.png");
 			SizeMode = PictureBoxSizeMode.StretchImage;
 			BackColor = Color.Transparent;
-			Width = 50;
-			Height = 50;
+			Width = 70;
+			Height = 70;
 			Top = 200;
 			Left = 1200;
 			

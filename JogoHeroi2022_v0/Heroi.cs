@@ -36,6 +36,8 @@ namespace JogoHeroi2022_v0
 		public int counter = 1;
 		public string rightImage = "personagemRight.gif";
 		public string leftImage = "personagemLeft.gif";
+		public int tiros = 0;
+		public bool vivo = true;
 		
 		// hero methods
 		public void Right(){
@@ -131,7 +133,7 @@ namespace JogoHeroi2022_v0
 			tiro.Parent = fundo;
 			tiro.Top =  top;
 			tiro.Left = left;
-			
+			this.tiros ++;
 		}
 	}
 }

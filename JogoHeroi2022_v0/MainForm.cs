@@ -32,7 +32,7 @@ namespace JogoHeroi2022_v0
 	
 		public static PictureBox fundo = new PictureBox();
 		
-		Heroi heroi = new Heroi();
+		public static Heroi heroi = new Heroi();
 		Inimigo inimigo = new Inimigo();
 		int counter = 1;
 		bool sky = false;
@@ -57,7 +57,7 @@ namespace JogoHeroi2022_v0
 				heroi.Right();
 			}
 			
-			if(e.KeyCode == Keys.Space){
+			if(e.KeyCode == Keys.Space && heroi.tiros <= 2 && heroi.vivo){
 				heroi.Shot(heroi.Top, heroi.Left, fundo);
 			}
 					
@@ -103,6 +103,8 @@ namespace JogoHeroi2022_v0
 			{
 			    inimigo.timer.Enabled = false;
 			    timer1.Enabled = false;
+			    inimigo.Dispose();
+			    heroi.vivo = false;
 			    heroi.Dispose();
 			    MessageBox.Show("COLIDIU");
 			}
