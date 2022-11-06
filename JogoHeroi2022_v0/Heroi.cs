@@ -131,7 +131,7 @@ namespace JogoHeroi2022_v0
 		{
 			Tiro tiro = new Tiro();
 			tiro.Parent = fundo;
-			tiro.Top =  top;
+			tiro.Top =  top + 75;
 			tiro.Left = left;
 			this.tiros ++;
 		}

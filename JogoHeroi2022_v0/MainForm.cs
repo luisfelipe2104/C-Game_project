@@ -36,6 +36,8 @@ namespace JogoHeroi2022_v0
 		Inimigo inimigo = new Inimigo();
 		int counter = 1;
 		bool sky = false;
+//		List<Inimigo> arrayInimigo = new List<Inimigo>;
+		Inimigo [] arrayInimigo = new Inimigo[1000];
 		
 		void MainFormKeyDown(object sender, KeyEventArgs e) // Programar as teclas de movimento.
 		{
@@ -62,6 +64,32 @@ namespace JogoHeroi2022_v0
 			}
 					
 			// e.KeyCode == Keys. Selecionar qualquer tecla
+		}
+		void Timer1Tick(object sender, EventArgs e)
+		{
+			
+			Random rnd = new Random();
+			int percent = rnd.Next(1, 101);
+			if(percent < 10){
+				Inimigo inimigo = new Inimigo();
+				inimigo.Parent = fundo;
+//				arrayInimigo.
+				
+			
+			
+			
+			if (heroi.Bounds.IntersectsWith(inimigo.Bounds))
+			{
+				inimigo.timer.Enabled = false;
+				timer1.Enabled = false;
+				inimigo.Dispose();
+				heroi.vivo = false;
+				heroi.Dispose();
+				MessageBox.Show("COLIDIU");
+			}
+			}
+			
+			
 		}
 		void PictureBox1Click(object sender, EventArgs e)
 		{
@@ -93,21 +121,13 @@ namespace JogoHeroi2022_v0
 			
 			timer1.Enabled = true;
 			
-			inimigo.Parent = fundo;
+			
 
 					
 		}
-		void Timer1Tick(object sender, EventArgs e)
+		void Timer2Tick(object sender, EventArgs e)
 		{
-			if (heroi.Bounds.IntersectsWith(inimigo.Bounds))
-			{
-			    inimigo.timer.Enabled = false;
-			    timer1.Enabled = false;
-			    inimigo.Dispose();
-			    heroi.vivo = false;
-			    heroi.Dispose();
-			    MessageBox.Show("COLIDIU");
-			}
+	
 		}
 		
 	}

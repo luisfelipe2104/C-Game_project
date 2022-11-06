@@ -16,6 +16,7 @@ namespace JogoHeroi2022_v0
 		private System.ComponentModel.IContainer components = null;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.Timer timer1;
+		private System.Windows.Forms.Timer timer2;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -42,6 +43,7 @@ namespace JogoHeroi2022_v0
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
+			this.timer2 = new System.Windows.Forms.Timer(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -59,6 +61,10 @@ namespace JogoHeroi2022_v0
 			// timer1
 			// 
 			this.timer1.Tick += new System.EventHandler(this.Timer1Tick);
+			// 
+			// timer2
+			// 
+			this.timer2.Tick += new System.EventHandler(this.Timer2Tick);
 			// 
 			// MainForm
 			// 
