@@ -15,6 +15,8 @@ namespace JogoHeroi2022_v0
 	/// <summary>
 	/// Description of Inimigo.
 	/// </summary>
+	/// 
+	
 	public class Inimigo : Personagem
 	{
 		public Inimigo()
@@ -24,8 +26,8 @@ namespace JogoHeroi2022_v0
 			BackColor = Color.Transparent;
 			Width = 70;
 			Height = 70;
-			Top = 200;
-			Left = 1200;
+			Top = 0;
+			Left = MainForm.fundo.Width;
 			
 			
 			timer.Enabled = true;
@@ -36,7 +38,7 @@ namespace JogoHeroi2022_v0
 		public Timer timer = new Timer();
 		public int dano;
 		
-		Random rnd = new Random();
+		
 		
 		void Movimento(object sender, EventArgs e)
 		{

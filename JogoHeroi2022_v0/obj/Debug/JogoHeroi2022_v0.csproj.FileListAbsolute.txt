@@ -86,3 +86,11 @@ C:\Users\Joaquim\Documents\SharpDevelop Projects\C-Game_project\JogoHeroi2022_v0
 C:\Users\Joaquim\Documents\SharpDevelop Projects\C-Game_project\JogoHeroi2022_v0\bin\Debug\JogoHeroi2022_v0.exe
 C:\Users\Joaquim\Documents\SharpDevelop Projects\C-Game_project\JogoHeroi2022_v0\bin\Debug\JogoHeroi2022_v0.pdb
 C:\Users\Joaquim\Documents\SharpDevelop Projects\C-Game_project\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.pdb
+C:\Users\aluno.etec\Downloads\C-Game_project-main\C-Game_project-main\JogoHeroi2022_v0\bin\Debug\JogoHeroi2022_v0.exe.config
+C:\Users\aluno.etec\Downloads\C-Game_project-main\C-Game_project-main\JogoHeroi2022_v0\bin\Debug\JogoHeroi2022_v0.exe
+C:\Users\aluno.etec\Downloads\C-Game_project-main\C-Game_project-main\JogoHeroi2022_v0\bin\Debug\JogoHeroi2022_v0.pdb
+C:\Users\aluno.etec\Downloads\C-Game_project-main\C-Game_project-main\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.csprojResolveAssemblyReference.cache
+C:\Users\aluno.etec\Downloads\C-Game_project-main\C-Game_project-main\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.MainForm.resources
+C:\Users\aluno.etec\Downloads\C-Game_project-main\C-Game_project-main\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.csproj.GenerateResource.Cache
+C:\Users\aluno.etec\Downloads\C-Game_project-main\C-Game_project-main\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.exe
+C:\Users\aluno.etec\Downloads\C-Game_project-main\C-Game_project-main\JogoHeroi2022_v0\obj\Debug\JogoHeroi2022_v0.pdb
