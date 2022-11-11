@@ -45,8 +45,8 @@ namespace JogoHeroi2022_v0
 			Left -= 15;
 			if (Left < - 100)
 			{
-				timer.Enabled = false;
-				Dispose();
+				this.timer.Enabled = false;
+				this.Dispose();
 			}
 		}
 	}

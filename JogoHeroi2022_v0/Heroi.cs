@@ -39,6 +39,8 @@ namespace JogoHeroi2022_v0
 		public int tiros = 0;
 		public bool vivo = true;
 		
+		public ListBox shotList = new ListBox();
+		
 		// hero methods
 		public void Right(){
 			if(counter == 3 && Left >= MainForm.fundo.Width - MainForm.fundo.Width/4){
@@ -130,9 +132,11 @@ namespace JogoHeroi2022_v0
 		public void Shot(int top, int left, PictureBox fundo)
 		{
 			Tiro tiro = new Tiro();
+			tiro.ahead = this.ahead;
 			tiro.Parent = fundo;
 			tiro.Top =  top + 75;
 			tiro.Left = left;
+			shotList.Items.Add(tiro);
 			this.tiros ++;
 		}
 	}

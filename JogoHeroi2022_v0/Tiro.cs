@@ -34,16 +34,18 @@ namespace JogoHeroi2022_v0
 		
 		public Timer timer2 = new Timer();
 		public int dano;
+		public bool ahead;
 		
 		Random rnd = new Random();
 		
 		void Movimento(object sender, EventArgs e)
 		{
-			Left += 25;
-			if (Left > MainForm.fundo.Width)
+			if (ahead) Left += 25;
+			else Left -= 25;
+			if (Left > MainForm.fundo.Width || Left < 0)
 			{
-				timer2.Enabled = false;
-				Dispose();
+				this.timer2.Enabled = false;
+				this.Dispose();
 				MainForm.heroi.tiros--;
 			}
 		}

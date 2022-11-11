@@ -36,8 +36,7 @@ namespace JogoHeroi2022_v0
 		Inimigo inimigo = new Inimigo();
 		int counter = 1;
 		bool sky = false;
-//		List<Inimigo> arrayInimigo = new List<Inimigo>;
-		Inimigo [] arrayInimigo = new Inimigo[1000];
+		ListBox enemyList = new ListBox();
 		
 		void MainFormKeyDown(object sender, KeyEventArgs e) // Programar as teclas de movimento.
 		{
@@ -65,40 +64,7 @@ namespace JogoHeroi2022_v0
 					
 			// e.KeyCode == Keys. Selecionar qualquer tecla
 		}
-		void Timer1Tick(object sender, EventArgs e)
-		{
-			
-			Random rnd = new Random();
-			int percent = rnd.Next(1, 101);
-			if(percent < 10){
-				Inimigo inimigo = new Inimigo();
-				inimigo.Parent = fundo;
-				int chance = rnd.Next(1, 4);
-				int positionY = 0;
-				
-				// determines the top position randomly
-				if (chance == 1) positionY = 100;
-				else if (chance == 2) positionY = 300;
-				else if (chance == 3) positionY = 500;
-				inimigo.Top = positionY;
-//				arrayInimigo.
-				
-			
-			
-			
-			if (heroi.Bounds.IntersectsWith(inimigo.Bounds))
-			{
-				inimigo.timer.Enabled = false;
-				timer1.Enabled = false;
-				inimigo.Dispose();
-				heroi.vivo = false;
-				heroi.Dispose();
-				MessageBox.Show("COLIDIU");
-			}
-			}
-			
-			
-		}
+		
 		void PictureBox1Click(object sender, EventArgs e)
 		{
 			this.KeyPreview = true;
@@ -128,14 +94,64 @@ namespace JogoHeroi2022_v0
 			heroi.Height = 200;
 			
 			timer1.Enabled = true;
-			
+			timer2.Enabled = true;
 			
 
 					
 		}
+		
+		void Timer1Tick(object sender, EventArgs e)
+		{
+			
+			Random rnd = new Random();
+			int percent = rnd.Next(1, 101);
+			if(percent < 10){
+				Inimigo inimigo = new Inimigo();
+				enemyList.Items.Add(inimigo);
+				inimigo.Parent = fundo;
+				int chance = rnd.Next(1, 4);
+				int positionY = 0;
+				
+				// determines the top position randomly
+				if (chance == 1) positionY = 100;
+				else if (chance == 2) positionY = 300;
+				else if (chance == 3) positionY = 500;
+				inimigo.Top = positionY;
+				
+			}			
+			
+		}
+		
 		void Timer2Tick(object sender, EventArgs e)
 		{
-	
+			if(!timer1.Enabled){
+				MessageBox.Show("ahhhhh");
+			}
+			foreach(Inimigo enemy in enemyList.Items){
+				if (heroi.Bounds.IntersectsWith(enemy.Bounds)){
+//				timer1.Enabled = false;
+				timer2.Enabled = false;
+				heroi.vivo = false;
+				heroi.Dispose();
+//				foreach(Inimigo enemyItem in enemyList.Items){
+//					enemyItem.Dispose();
+//					enemyItem.timer.Enabled = false;
+//				}
+				MessageBox.Show("COLIDIU");
+			}
+			
+				foreach(Tiro shot in heroi.shotList.Items){
+					if (shot.Bounds.IntersectsWith(enemy.Bounds)){
+//							enemyList.Items.Remove(enemy);
+					    	enemy.Dispose();
+					    	enemy.timer.Enabled = false;
+					    	enemy.Left = -100;
+//					    	shot.Dispose();
+//					    	shot.timer2.Enabled = false;
+					    }
+				}
+			}
+			
 		}
 		
 	}
