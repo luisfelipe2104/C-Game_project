@@ -36,8 +36,7 @@ namespace JogoHeroi2022_v0
 		Inimigo inimigo = new Inimigo();
 		int counter = 1;
 		bool sky = false;
-//		List<Inimigo> arrayInimigo = new List<Inimigo>;
-		Inimigo [] arrayInimigo = new Inimigo[1000];
+		ListBox enemyList = new ListBox();
 		
 		void MainFormKeyDown(object sender, KeyEventArgs e) // Programar as teclas de movimento.
 		{
@@ -73,21 +72,14 @@ namespace JogoHeroi2022_v0
 			if(percent < 10){
 				Inimigo inimigo = new Inimigo();
 				inimigo.Parent = fundo;
+				enemyList.Items.Add(inimigo);
 //				arrayInimigo.
 				
 			
+			}
 			
 			
-			if (heroi.Bounds.IntersectsWith(inimigo.Bounds))
-			{
-				inimigo.timer.Enabled = false;
-				timer1.Enabled = false;
-				inimigo.Dispose();
-				heroi.vivo = false;
-				heroi.Dispose();
-				MessageBox.Show("COLIDIU");
-			}
-			}
+			
 			
 			
 		}
@@ -120,14 +112,24 @@ namespace JogoHeroi2022_v0
 			heroi.Height = 200;
 			
 			timer1.Enabled = true;
-			
+			timer2.Enabled = true;
 			
 
 					
 		}
 		void Timer2Tick(object sender, EventArgs e)
 		{
-	
+			foreach(Inimigo enemy in enemyList.Items){
+				if (heroi.Bounds.IntersectsWith(enemy.Bounds)){
+				inimigo.timer.Enabled = false;
+				timer1.Enabled = false;
+				inimigo.Dispose();
+				heroi.vivo = false;
+				heroi.Dispose();
+				MessageBox.Show("COLIDIU");
+			}
+			}
+			
 		}
 		
 	}
